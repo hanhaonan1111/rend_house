@@ -10,8 +10,8 @@ http.interceptors.request.use((config: any) => {
     return config
 })
 
-http.interceptors.response.use((res) => {
-    return res.data
+http.interceptors.response.use(async (res) => {
+    return await res.data
 }, (e) => {
     return Promise.reject(e)
 })
